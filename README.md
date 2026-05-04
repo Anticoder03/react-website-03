@@ -1,16 +1,89 @@
-# React + Vite
+# Text Utils
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A small React + Vite app for quickly analyzing and transforming text. Paste or type content into the editor, then use the built-in controls to clean it up, change its case, or copy it to your clipboard.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Live text preview and editing.
+- Word, character, and estimated reading-time statistics.
+- One-click text actions:
+  - Clear all text.
+  - Copy text to the clipboard.
+  - Remove extra spaces.
+  - Convert text to uppercase.
+  - Convert text to lowercase.
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React 19
+- Vite
+- React Icons
+- ESLint
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js 18 or newer
+- npm
+
+### Install Dependencies
+
+```bash
+npm install
+```
+
+### Run the App
+
+```bash
+npm run dev
+```
+
+Then open the local URL shown in the terminal, usually `http://localhost:5173`.
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+### Preview the Production Build
+
+```bash
+npm run preview
+```
+
+### Lint the Code
+
+```bash
+npm run lint
+```
+
+## How It Works
+
+The main UI lives in [src/components/TextField.jsx](src/components/TextField.jsx), which manages the text state and calculates the summary values as you type. Reusable button rendering is handled by [src/components/Buttons.jsx](src/components/Buttons.jsx).
+
+## Project Structure
+
+```text
+src/
+  App.jsx
+  main.jsx
+  components/
+    Buttons.jsx
+    Buttons.css
+    TextField.jsx
+    TextField.css
+```
+
+## Notes
+
+- The clipboard action uses the browser Clipboard API, so it works best in secure contexts such as `localhost` or HTTPS.
+- Reading time is estimated at 200 words per minute.
+
+## Available Scripts
+
+- `npm run dev` - start the development server.
+- `npm run build` - create an optimized production build.
+- `npm run preview` - preview the production build locally.
+- `npm run lint` - run ESLint across the project.
