@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:  sans-serif;
+}
+.container{
+    display: flex;
+    width: 100vw;
+    height: 90vh;
+    justify-content: center; 
+    align-items: center; 
+}
+.heading{
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+.leftpanal{
+    width: 45%;
+    height: 100%;
+    background-color: #f5f5f5;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+.rightpanal{
+    width: 45%;
+    height: 100%;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+/* style the test summary rightpanal */
+.summary_heading{
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+.s_text{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.word_count{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.char_count{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+.reading_time{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
